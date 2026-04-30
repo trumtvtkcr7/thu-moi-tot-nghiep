@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thư Mời Lễ Tốt Nghiệp</title>
+    <title>Thư Mời Lễ Tốt Nghiệp - Nguyễn Quang Tiên</title>
     
     <!-- Bootstrap 5 & Google Fonts -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,10 +27,10 @@
             background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
             background-attachment: fixed;
             overflow-x: hidden;
-            position: relative; /* Cần thiết cho các hiệu ứng tuyệt đối */
+            position: relative;
         }
 
-        /* Hiệu ứng bong bóng bay lên */
+        /* Hiệu ứng bong bóng bay */
         .bubbles {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -43,7 +43,6 @@
             bottom: -150px;
             animation: bubbleUp 25s linear infinite;
         }
-        /* Tùy chỉnh kích thước và vị trí bong bóng */
         .bubbles li:nth-child(1) { left: 10%; width: 80px; height: 80px; animation-delay: 0s; }
         .bubbles li:nth-child(2) { left: 20%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
         .bubbles li:nth-child(3) { left: 35%; width: 50px; height: 50px; animation-delay: 4s; }
@@ -51,58 +50,52 @@
         .bubbles li:nth-child(5) { left: 65%; width: 20px; height: 20px; animation-delay: 0s; }
         .bubbles li:nth-child(6) { left: 75%; width: 110px; height: 110px; animation-delay: 3s; }
         .bubbles li:nth-child(7) { left: 85%; width: 150px; height: 150px; animation-delay: 7s; }
-        .bubbles li:nth-child(8) { left: 15%; width: 25px; height: 25px; animation-delay: 15s; animation-duration: 45s; }
-        .bubbles li:nth-child(9) { left: 45%; width: 15px; height: 15px; animation-delay: 2s; animation-duration: 35s; }
-        .bubbles li:nth-child(10) { left: 90%; width: 160px; height: 160px; animation-delay: 11s; }
 
         @keyframes bubbleUp {
             0% { transform: translateY(0); opacity: 1; }
             100% { transform: translateY(-1000px); opacity: 0; }
         }
 
-        /* Hiệu ứng mũ tốt nghiệp rơi xuống */
+        /* Hiệu ứng mũ tốt nghiệp */
         .grad-caps {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             z-index: -1; margin: 0; padding: 0;
-            pointer-events: none; /* Đảm bảo không cản trở tương tác chuột */
+            pointer-events: none;
         }
         .grad-caps li {
             position: absolute; list-style: none; display: block;
-            width: 40px; height: 40px; /* Kích thước mũ */
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M623.1 136.9l-282.7-101.2c-13.7-4.9-28.8-4.9-42.5 0L15.2 136.9C6.5 140 0 148.4 0 157.8s6.5 17.8 15.2 20.9l81.3 29.1 10.1 82.2c1.6 13.3 12.8 23.4 26.2 23.4H288c14.2 0 25.6-11.4 25.6-25.6s-11.4-25.6-25.6-25.6H232.8l-7.3-59.3 88.8 31.8c13.7 4.9 28.8 4.9 42.5 0l282.7-101.2c8.7-3.1 15.2-11.5 15.2-20.9s-6.5-17.8-15.2-20.9zM320 352c-1.3 0-2.6 0-3.9 0c1.3 0 2.6 0 3.9 0zm0 0c-1.3 0-2.6 0-3.9 0c1.3 0 2.6 0 3.9 0z"/></svg>');
+            width: 40px; height: 40px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="%233a7bd5" d="M623.1 136.9l-282.7-101.2c-13.7-4.9-28.8-4.9-42.5 0L15.2 136.9C6.5 140 0 148.4 0 157.8s6.5 17.8 15.2 20.9l81.3 29.1 10.1 82.2c1.6 13.3 12.8 23.4 26.2 23.4H288c14.2 0 25.6-11.4 25.6-25.6s-11.4-25.6-25.6-25.6H232.8l-7.3-59.3 88.8 31.8c13.7 4.9 28.8 4.9 42.5 0l282.7-101.2c8.7-3.1 15.2-11.5 15.2-20.9s-6.5-17.8-15.2-20.9zM320 352c-1.3 0-2.6 0-3.9 0c1.3 0 2.6 0 3.9 0z"/></svg>');
             background-size: contain;
             background-repeat: no-repeat;
-            opacity: 0.6;
+            opacity: 0.4;
             top: -50px;
             animation: capFall linear infinite;
         }
-        /* Tùy chỉnh vị trí và thời gian mũ rơi */
         .grad-caps li:nth-child(1) { left: 15%; animation-duration: 10s; animation-delay: 1s; }
-        .grad-caps li:nth-child(2) { left: 30%; animation-duration: 15s; animation-delay: 3s; transform: scale(0.7); }
-        .grad-caps li:nth-child(3) { left: 45%; animation-duration: 12s; animation-delay: 5s; transform: rotate(15deg); }
-        .grad-caps li:nth-child(4) { left: 60%; animation-duration: 18s; animation-delay: 2s; transform: scale(1.2); }
-        .grad-caps li:nth-child(5) { left: 75%; animation-duration: 14s; animation-delay: 0s; transform: rotate(-10deg); }
-        .grad-caps li:nth-child(6) { left: 90%; animation-duration: 11s; animation-delay: 4s; }
+        .grad-caps li:nth-child(2) { left: 45%; animation-duration: 12s; animation-delay: 5s; }
+        .grad-caps li:nth-child(3) { left: 75%; animation-duration: 14s; animation-delay: 0s; }
 
         @keyframes capFall {
-            0% { transform: translateY(0) rotate(0deg); opacity: 0.6; }
+            0% { transform: translateY(0) rotate(0deg); opacity: 0.4; }
             100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
         }
 
+        /* Card chính */
         .invitation-card {
             max-width: 650px;
             margin: 40px auto;
-            background: rgba(224, 247, 250, 0.7);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            background: rgba(224, 247, 250, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             padding: 40px;
             border-radius: 40px;
             border: 2px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 20px 50px rgba(58, 123, 213, 0.15);
+            box-shadow: 0 20px 50px rgba(58, 123, 213, 0.2);
             text-align: center;
             position: relative;
-            z-index: 10; /* Đảm bảo thiệp nằm trên hiệu ứng nền */
+            z-index: 10;
         }
 
         h1 {
@@ -121,7 +114,6 @@
             font-weight: 600;
         }
 
-        /* Style mới cho tên của bạn */
         .graduate-name {
             font-size: 2.2rem;
             color: var(--deep-blue);
@@ -129,9 +121,9 @@
             margin-bottom: 25px;
             text-transform: uppercase;
             display: block;
+            line-height: 1.2;
         }
 
-        /* Khung ảnh chân dung to hơn */
         .profile-pic-container {
             width: 280px; 
             height: 280px;
@@ -145,6 +137,7 @@
         .profile-pic {
             width: 100%;
             height: 100%;
+            display: block;
             object-fit: cover;
             border-radius: 50%;
             border: 5px solid #fff;
@@ -189,9 +182,7 @@
             transition: transform 0.3s ease;
         }
         
-        .btn-custom:hover {
-            transform: scale(1.05);
-        }
+        .btn-custom:hover { transform: scale(1.05); }
 
         .map-container {
             margin-top: 30px;
@@ -199,19 +190,37 @@
             overflow: hidden;
             border: 4px solid rgba(255, 255, 255, 0.9);
         }
+
+        /* --- TỐI ƯU CHO ĐIỆN THOẠI (RESPONSIVE) --- */
+        @media (max-width: 576px) {
+            .invitation-card {
+                padding: 25px 15px;
+                margin: 20px 10px;
+                border-radius: 30px;
+            }
+            h1 { font-size: 2.5rem; }
+            .subtitle { font-size: 0.8rem; letter-spacing: 1px; }
+            .graduate-name { font-size: 1.6rem; margin-bottom: 15px; }
+            .profile-pic-container { width: 200px; height: 200px; }
+            .fs-5 { font-size: 1rem !important; }
+            .info-section { padding: 15px 5px; }
+            .info-section .fs-3 { font-size: 1.3rem !important; }
+            .countdown-time { font-size: 1.5rem; }
+            .countdown-container small { font-size: 0.7rem; }
+            .address-text { font-size: 0.8rem; }
+            .btn-custom { width: 100%; padding: 12px 10px; font-size: 0.9rem; }
+            iframe { height: 150px; }
+        }
     </style>
 </head>
 <body>
 
-<!-- Danh sách bong bóng -->
 <ul class="bubbles">
-    <li></li><li></li><li></li><li></li><li></li>
-    <li></li><li></li><li></li><li></li><li></li>
+    <li></li><li></li><li></li><li></li><li></li><li></li><li></li>
 </ul>
 
-<!-- Danh sách mũ tốt nghiệp -->
 <ul class="grad-caps">
-    <li></li><li></li><li></li><li></li><li></li><li></li>
+    <li></li><li></li><li></li>
 </ul>
 
 <div class="container">
@@ -224,12 +233,10 @@
             <img src="anhtn.png" alt="Ảnh tốt nghiệp" class="profile-pic">
         </div>
         
-        <p class="fs-5">Mình rất mong mọi người sẽ có mặt để cùng mình lưu giữ khoảnh khắc đáng nhớ nhất của thời sinh viên! <span class="highlight"></span></p>
-        
-        <!-- <p class="text-muted">Mình rất mong bạn sẽ có mặt để cùng mình lưu giữ khoảnh khắc đáng nhớ nhất của thời sinh viên!</p> -->
+        <p class="fs-5">Mình rất mong mọi người sẽ có mặt để cùng mình lưu giữ khoảnh khắc đáng nhớ nhất của thời sinh viên!</p>
 
         <div class="info-section">
-            <div class="row align-items-center">
+            <div class="row g-0 align-items-center">
                 <div class="col-6 border-end border-info">
                     <p class="mb-0 small opacity-75">THỜI GIAN</p>
                     <p class="mb-0 fs-3 fw-bold highlight">07:00</p>
@@ -240,11 +247,11 @@
                 </div>
             </div>
             <p class="mt-4 mb-0"><strong>Trường ĐH CNTT & TT Việt - Hàn (VKU)</strong></p>
-            <p class="address-text">(470 Trần Đại Nghĩa, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng)</p>
+            <p class="address-text mb-0">(470 Trần Đại Nghĩa, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng)</p>
         </div>
 
         <div class="countdown-container">
-            <div id="timer" class="d-flex justify-content-center gap-3">
+            <div id="timer" class="d-flex justify-content-center gap-2 gap-sm-3">
                 <div class="text-center"><div id="days" class="countdown-time">00</div><small>Ngày</small></div>
                 <div class="countdown-time">:</div>
                 <div class="text-center"><div id="hours" class="countdown-time">00</div><small>Giờ</small></div>
@@ -256,10 +263,10 @@
         </div>
 
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.733926172043!2d108.25065207594275!3d15.975265441944858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142108997dc971f%3A0x1295cb3d313469c9!2sVietnam%20-%20Korea%20University%20of%20Information%20and%20Communication%20Technology!5e0!3m2!1sen!2s!4v1777538961397!5m2!1sen!2s" width="600" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.733926172043!2d108.25065207594275!3d15.975265441944858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142108997dc971f%3A0x1295cb3d313469c9!2sVietnam%20-%20Korea%20University%20of%20Information%20and%20Communication%20Technology!5e0!3m2!1sen!2s!4v1777538961397!5m2!1sen!2s" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
-        <div class="mt-5">
+        <div class="mt-4">
             <a href="https://maps.app.goo.gl/bx2XkcxN5qQzfoc17" target="_blank" class="btn btn-custom">HẸN GẶP MỌI NGƯỜI TẠI BUỔI LỄ</a>
         </div>
     </div>
@@ -270,6 +277,13 @@
     const x = setInterval(function() {
         const now = new Date().getTime();
         const distance = countDownDate - now;
+        
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "<div class='fw-bold highlight'>BUỔI LỄ ĐANG DIỄN RA!</div>";
+            return;
+        }
+
         document.getElementById("days").innerHTML = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, '0');
         document.getElementById("hours").innerHTML = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
         document.getElementById("minutes").innerHTML = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
